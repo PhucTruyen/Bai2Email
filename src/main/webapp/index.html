@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Murach's Java Servlets and JSP</title>
+    <link rel="stylesheet" href="main.css" type="text/css"/>
+</head>
+<body>
+    <div class="bookimage">
+        <img src="https://southeastlinuxfest.org/wp-content/uploads/2014/06/Murach_image-450x450.jpg" 
+                 alt="Murach's Java Book Cover" 
+                 width="100" 
+                 height="100" >
+    </div>
+    <div class="container">
+        <h1>Survey</h1>
+        <p>If you have any questions or comments, please let us know.</p>
+
+        <h2>Your Information</h2>
+        <form action="emailList" method="post">
+            <input type="hidden" name="action" value="add">
+
+            <label class="label-regular">First Name</label>
+            <input type="text" name="firstName" required><br>
+
+            <label class="label-regular">Last Name</label>
+            <input type="text" name="lastName" required><br>
+
+            <label class="label-regular">Email</label>
+            <input type="email" name="email" required><br>
+
+            <label class="label-regular">Date of Birth</label>
+            <input type="date" name="dateOfBirth" required><br>
+
+
+            <h2>How did you hear about us?</h2>
+            <div class="radio">
+                <input type="radio" name="hearabout" value="Search engine"> Search engine<br>
+                <input type="radio" name="hearabout" value="Word of mouth"> Word of mouth<br>
+                <input type="radio" name="hearabout" value="Social media"> Social media<br>
+                <input type="radio" name="hearabout" value="Other"> Other<br>
+            </div>
+
+            <h2>Would you like to receive announcements about new CDs and special offers?</h2>
+            <div class="checkbox">
+                <input type="checkbox" name="announcements" value="YES, I'd like that">
+                YES, I'd like that.<br>
+                
+                <input type="checkbox" name="announcements" value="YES, Please send me email announcements">
+                YES, Please send me email announcements.<br>
+            </div>
+
+            <label class="label-select">Please contact me by:</label>
+            <select name="contactMethod">
+                <option value="Email only">Email only</option>
+                <option value="Postal mail only">Postal mail only</option>
+                <option value="Phone only">Phone only</option>
+                <option value="Email or postal mail">Email or Postal mail</option>
+                <option value="Phone or Postal mail">Phone or Postal mail</option>
+                <option value="Email or Phone">Email or Phone</option>
+                <option value="Email, postal mail or phone">Email, postal mail or phone</option>
+            </select><br>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
